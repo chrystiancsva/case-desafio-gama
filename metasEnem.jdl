@@ -1,0 +1,14 @@
+
+entity Aluno {
+    nome String required
+}
+
+entity Meta {
+    valor Integer required
+    area String required
+}
+
+relationship ManyToOne {
+    Meta{aluno(nome)} to Aluno{metas}
+}
+
